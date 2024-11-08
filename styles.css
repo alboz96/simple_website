@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fc2e20;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+header nav {
+    position: relative;
+}
+
+/* Add styles for the hamburger icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Styles for mobile (screens with a max width of 768px) */
+@media (max-width: 768px) {
+
+    /* Hide regular menu and show hamburger icon */
+    .menu {
+        display: none;
+        /* Initially hide the menu */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fc2e20;
+    }
+
+    .menu a {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        /* Show hamburger icon */
+    }
+
+    .menu.show {
+        display: flex;
+        /* Display menu when toggled */
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #fc2e20;
+    background-image: url('assets/images/background2.png');
+    background-size: contain;
+    /* Ensures the whole image is visible */
+    background-repeat: no-repeat;
+    /* Prevents tiling of the image */
+    background-position: center;
+    color: #fff;
+    text-align: left;
+    min-height: 40vh;
+    max-height: 50vh;
+    /* Provides some vertical space without filling the entire screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.hero .buy-button {
+    background-color: #a4ff5c;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+/* Make adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 4em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero {
+        min-height: 50vh;
+        /* Smaller height for smaller screens */
+    }
+}
+
+/* Description Section */
+.description {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.description h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* Product Selection Section */
+.products {
+    display: flex;
+    justify-content: space-around;
+    background-color: #a4ff5c;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product {
+    flex: 1;
+    max-width: 250px;
+    margin: 0 20px;
+}
+
+.product img {
+    width: 100%;
+    width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+
+
+.product h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product .buy-button {
+    background-color: #ff6600;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Rules Section */
+.rules {
+    display: flex;
+    align-items: center;
+    padding: 50px 100px;
+    background-image: url('assets/images/bg-grid2.png');
+    background-repeat: no-repeat;
+    /* Prevents the background from repeating */
+    background-size: contain;
+    /* Scales the image to fit within the section */
+    background-position: center;
+    /* Centers the background image within the section */
+}
+
+/* Additional media query for smaller screens */
+@media (max-width: 768px) {
+    .rules {
+        /* flex-direction: column; */
+        /* Stack content vertically on smaller screens */
+        padding: 30px 20px;
+        /* Adjusts padding */
+        background-size: 80%;
+        /* Adjusts image size for smaller screens */
+    }
+
+    .product h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+
+
+.rules .text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.rules h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.rules p {
+    font-size: 18px;
+    color: #333;
+}
+
+.rules .image {
+    flex: 1;
+}
+
+.rules .image img {
+    width: 100%;
+    /* Scales the image to fit within the container */
+    max-width: 300px;
+    /* Limits the image size */
+    height: auto;
+    /* Keeps the image aspect ratio */
+    display: block;
+    /* Removes any inline spacing around the image */
+    margin: 0 auto;
+    /* Centers the image within its container */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    /* Distributes space evenly around each link */
+    align-items: center;
+    padding: 10px 0;
+    /* Optional padding for spacing */
+}
+
+footer nav a {
+    color: #ffffff;
+    text-decoration: none;
+    /* Makes all links bold */
+}
+
+/* Carousel */
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    background-color: #a4ff5c;
+}
+
+.carousel-item {
+    max-width: 150px;
+    display: none;
+    /* Hide all images initially */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-prev, .carousel-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
